@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+</head>
+<style>
+  /* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header styles */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Main content styles */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-info {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.user-info img {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.user-info h2 {
+  margin-bottom: 5px;
+}
+
+.user-info p {
+  margin-bottom: 10px;
+}
+
+.user-info .status {
+  font-weight: bold;
+}
+
+.user-info .download-resume {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.user-info .download-resume:hover {
+  background-color: #0062cc;
+}
+
+</style>
+<body>
+
+    <header>
+      <h1>Profile Dashboard</h1>
+    </header>
+    <main>
+      <div class="user-info">
+        <img src="https://via.placeholder.com/150" alt="User's profile photo">
+        <h2>John Doe</h2>
+        <p>Email: john.doe@example.com</p>
+        <p>Phone: 555-1234</p>
+        <p>Status: Personality test not attended</p>
+        <a href="#">Download Resume</a>
+      </div>
+    </main>
+
+  
+</body>
+</html>

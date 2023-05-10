@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questtionaire</title>
+  </head>
+  <body>
+    <div class="quiz-card">
+      <h2>Quiz Title</h2>
+      <form action="/test" method="POST">
+        <ol>
+          {% for question in data %}
+          <li>
+            <h4>{{ question["text"] }}</h4>
+            {% for choice in question.choices%}
+            <div>
+              <input
+                name="{{question.id}}"
+                type="radio"
+                value='{{choice["score"]}},{{question["facet"]}},{{question["domain"]}}'
+                id="{{question.id}}{{choice['color']}}"
+              />
+              <label for="{{question.id}}{{choice['color']}}"
+                >{{choice["text"]}}</label
+              >
+            </div>
+            {%endfor %} {% endfor%}
+          </li>
+          <!-- Add more questions as needed -->
+        </ol>
+        <button type="submit">Submit Quiz</button>
+      </form>
+    </div>
+  </body>
+</html>
